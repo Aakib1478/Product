@@ -24,6 +24,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       </div>
+      {% if user.is_authenticated %}
+   <h3>Welcome, {{user.username}} </h3> &nbsp&nbsp&nbsp&nbsp
+        {% endif %}
+      <button><a href="{% url 'add_product' %}">ADD product</a></button>
+      <button><a href="{% url 'products' %}">View All products</a></button>
+      <button class="btn-warning"><a href="{% url 'signout' %}">Logout</a></button>
+
     </nav>
   </header>
   <div class="container">

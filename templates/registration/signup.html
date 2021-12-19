@@ -14,17 +14,25 @@
 
 <form method = "POST" action="{% url 'signup' %}">
     {% csrf_token %}
+    first_name:
+    <br/>
+    <input type="text" name="first_name" />
+    <br/>
+    last_name:
+    <br/>
+    <input type="text" name="last_name" />
+    <br/>
     username:
     <br/>
     <input type="text" name="username" />
     <br/>
     Password:
     <br/>
-    <input type="password" name="password1" />
+    <input type="password" name="password" />
     <br/>
-    confirm Password:
+    email:
     <br/>
-    <input type="password" name="password2" />
+    <input type="email" name="email" />
     <br/>
     <input class ="btn btn-primary" type="submit" value= "signup" />
     <br/>
@@ -32,6 +40,6 @@
 
 
 </form>
-
+<button><a href="{% url 'signin' %}"> Sign In </button>
 
 {% endblock %}
